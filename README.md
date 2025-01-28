@@ -1,6 +1,6 @@
 # Frontend Mentor - Results summary component solution
 
-This is a solution to the [Results summary component challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/results-summary-component-CE_K6s0maV). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
+This is a solution to the [Results summary component challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/results-summary-component-CE_K6s0maV). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
 ## Table of contents
 
@@ -17,7 +17,6 @@ This is a solution to the [Results summary component challenge on Frontend Mento
     - [Useful resources](#useful-resources)
   - [Author](#author)
 
-
 ## Overview
 
 ### The challenge
@@ -31,15 +30,17 @@ Users should be able to:
 ### Screenshot
 
 **Mobile Version**
-![Mobile Version](screenshots/mobile.png)  
+
+![Mobile Version](screenshots/mobile.png)
 
 **Desktop Version**
+
 ![Desktop Version](screenshots/desktop.png)
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [https://github.com/isaacohenedanso/result-summary-component](https://github.com/isaacohenedanso/result-summary-component)
+- Live Site URL: [https://result-summary-component-sable-six.vercel.app/](https://result-summary-component-sable-six.vercel.app/)
 
 ## My process
 
@@ -50,14 +51,14 @@ Users should be able to:
 - Flexbox
 - Mobile-first workflow
 - Sass
-  
+
 ### What I learned
 
 I learnt and mastered how to use the fetch api to get data from the data.json file and then insert those data into the webpage
 
 ### Continued development
 
-This was a cool project, however i hope to finish projects like this quite faster 
+This was a cool project, however i hope to finish projects like this quite faster
 
 ### Useful resources
 
@@ -65,4 +66,3 @@ This was a cool project, however i hope to finish projects like this quite faste
 
 - Website - [Isaac Danso]()
 - Frontend Mentor - [@isaacohenedanso](https://www.frontendmentor.io/profile/isaacohenedanso)
-
