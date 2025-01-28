@@ -120,8 +120,12 @@ html {
               color: map-get($neutral, "Dark_gray_blue");
             }
           }
+          &:hover {
+            background-color: lighten(nth($primary, $i), 40%);
+          }
         }
       }
+
       .btn {
         background-color: map-get($neutral, "Dark_gray_blue");
         border-radius: 35px;
@@ -131,6 +135,10 @@ html {
         height: 45px;
         color: map-get($neutral, "White");
         outline: none;
+        cursor: pointer;
+        &:hover {
+          background-color: lighten(map-get($neutral, "Dark_gray_blue"), 10%);
+        }
       }
     }
   }
