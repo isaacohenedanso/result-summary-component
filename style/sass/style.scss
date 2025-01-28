@@ -1,0 +1,167 @@
+@import url("https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap");
+$mobile: 375px;
+$paragraph: 18px;
+$primary: (
+  hsl(0, 100%, 67%),
+  hsl(39, 100%, 56%),
+  hsl(166, 100%, 37%),
+  hsl(234, 85%, 45%)
+);
+$gradients: (
+  "Light_slate_blue_(background)": hsl(252, 100%, 67%),
+  "Light_royal_blue_(background)": hsl(241, 81%, 54%),
+  "violet_blue_(circle)": hsla(256, 72%, 46%, 1),
+  "Persian_blue_(circle)": hsla(241, 72%, 46%, 0),
+);
+$neutral: (
+  "White": hsl(0, 0%, 100%),
+  "Pale_blue": hsl(221, 100%, 96%),
+  "Light_lavender": hsl(241, 100%, 89%),
+  "Dark_gray_blue": hsl(224, 30%, 27%),
+);
+
+html {
+  box-sizing: border-box;
+  *,
+  *::before,
+  *::after {
+    box-sizing: inherit;
+  }
+  body,
+  section,
+  h1,
+  h2,
+  p,
+  button {
+    margin: 0px;
+    padding: 0px;
+  }
+  body {
+    font-family: "Hanken Grotesk", serif;
+    background-color: map-get($neutral, "Pale_blue");
+    animation: show 2s ease-in-out;
+    .banner {
+      background-image: linear-gradient(
+        to bottom,
+        map-get($gradients, "Light_slate_blue_(background)"),
+        map-get($gradients, "Light_royal_blue_(background)")
+      );
+      color: map-get($neutral, "Light_lavender");
+      height: 300px;
+      padding: 35px;
+      border-bottom-left-radius: 15px;
+      border-bottom-right-radius: 15px;
+      text-align: center;
+      .result {
+        width: 100px;
+        height: 100px;
+        margin: 15px auto 0px auto;
+        background-image: linear-gradient(
+          to bottom,
+          map-get($gradients, "Light_royal_blue_(background)"),
+          map-get($gradients, "Light_slate_blue_(background)")
+        );
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-self: center;
+        flex-direction: column;
+        font-size: 14px;
+        color: map-get($neutral, "Light_lavender");
+        .result_value {
+          font-weight: 700;
+          font-size: 48px;
+          color: map-get($neutral, "White");
+        }
+      }
+      .remark {
+        padding-top: 15px;
+        color: map-get($neutral, "White");
+        font-size: 18px;
+        font-weight: 700;
+      }
+      .feedback {
+        padding-top: 15px;
+        color: map-get($neutral, "Light_lavender");
+      }
+    }
+    .summary {
+      padding: 35px;
+      background-color: map-get($neutral, "White");
+      font-weight: 700;
+      p {
+        color: map-get($neutral, "Dark_gray_blue");
+      }
+      @for $i from 1 through 4 {
+        div:nth-of-type(#{$i}) {
+          margin: 10px auto 0px;
+          background-color: lighten(nth($primary, $i), 35%);
+          color: nth($primary, $i);
+          border-radius: 5px;
+          padding: 10px;
+          height: 40px;
+
+          font-size: 14px;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          .categories {
+            display: flex;
+            align-items: center;
+            img {
+              width: 20px;
+              margin: 5%;
+            }
+          }
+          .score_percent {
+            margin: 5%;
+            color: map-get($neutral, "Light_lavender");
+            .score {
+              color: map-get($neutral, "Dark_gray_blue");
+            }
+          }
+        }
+      }
+      .btn {
+        background-color: map-get($neutral, "Dark_gray_blue");
+        border-radius: 35px;
+        width: 100%;
+        padding: 10px;
+        margin-top: 15px;
+        height: 45px;
+        color: map-get($neutral, "White");
+        outline: none;
+      }
+    }
+  }
+}
+
+@keyframes show {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media (min-width: $mobile) {
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    .banner {
+      width: 300px;
+      height: 350px !important;
+      border-radius: 15px;
+    }
+    .summary {
+      width: 300px;
+      height: 350px;
+      border-top-right-radius: 15px;
+      border-bottom-right-radius: 15px;
+    }
+  }
+}
